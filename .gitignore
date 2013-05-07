@@ -3,4 +3,6 @@
 /sql-dump-*.sql
 /db-sync
 /content/upgrade/
+/cap
 .DS_Store
+
