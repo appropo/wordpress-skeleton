@@ -1,10 +1,19 @@
-
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
+	RewriteEngine On
+	RewriteBase /
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /index.php [L]
+
+	# Change login URL from /wp-login to /admin
+	RewriteRule ^admin(.*)$ wp-login.php$1
 </IfModule>
 # END WordPress
+
+# Protecting .htaccess (block the viewing any file beginning with "hta")
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+	order allow,deny
+	deny from all
+	satisfy all
+</Files>

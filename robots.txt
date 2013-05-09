@@ -1,0 +1,13 @@
+User-agent: *
+
+# In Development (disallow all)
+Disallow: /
+
+# In Production (disallow only certain)
+#	Disallow: /wp/feed/
+#	Disallow: /wp/trackback/
+#	Disallow: /wp/wp-admin/
+#	Disallow: /content/
+#	Disallow: /wp/wp-includes/
+#	Disallow: /wp/xmlrpc.php
+#	Disallow: /wp-
