@@ -18,8 +18,8 @@ define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
 define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
 define( 'NONCE_SALT',       'put your unique phrase here' );
 
-// Table prefix, change this if you have multiple installs in the same database
-$table_prefix  = 'wp_';
+// Table prefix, change to project-key (initals of 'working title' e.g. 'wt')
+$table_prefix  = 'wt_';
 
 // Language, eave blank for American English
 define( 'WPLANG', '' );
