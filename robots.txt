@@ -3,7 +3,7 @@ User-agent: *
 # In Development (disallow all)
 Disallow: /
 
-# In Production (disallow only certain)
+# In Production (disallow only certain directories)
 #	Disallow: /wp/feed/
 #	Disallow: /wp/trackback/
 #	Disallow: /wp/wp-admin/
