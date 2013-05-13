@@ -1,8 +1,6 @@
 /shared
 /wp-config.php
-/sql-dump-*.sql
-/db-sync
 /content/upgrade/
-/cap
+/db/*-users.sql
+/db/*-ugd.sql
 .DS_Store
-
