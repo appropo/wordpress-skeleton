@@ -12,10 +12,14 @@ This is a fork from Mark Jaquith's wordpress skeleton at [https://github.com/mar
 
 ## Getting started
 1. setup your localhost (vhost, database, ...)
-2. clone this skeleton to your development project's directory
-3. clone wp-deployment-stack
-4. copy wp-config-sample.php to wp-config.php and modify it according to your local development environment and your project's working title
-5. create local shared directory
-6. init and update git submodules
-7. create your custom theme directory
-8. your project's initial git commit
+2. clone this skeleton to your development project's directory `$ git clone --depth 1 https://github.com/moritzhaller/wordpress-skeleton.git working-title`
+3. copy wp-config-sample.php to wp-config.php and modify it according to your local development environment and your project's working title `$ cd working-title && cp wp-config-sample.php wp-config.php`
+4. create local shared directory `$ mkdir shared`
+5. create local db-sync directory `$ mkdir db-symc`
+5. init and update git submodules
+	1. Initialize: `git submodule init`
+	2. Update: `git submodule update`
+6. navigate to working-title.dev/wp/wp-admin/install.php and follow installation instructions
+7. Change the remote origin to your project's scm repository `$ git config -e`
+8. Add another remote repo for mergin upstream changes later `$ git remote add upstream https://github.com/moritzhaller/wordpress-skeleton.git`
+8. start developing your custom theme, api, or whatever your need to do
