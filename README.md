@@ -15,7 +15,6 @@ This is a fork from Mark Jaquith's wordpress skeleton at [https://github.com/mar
 2. clone this skeleton to your development project's directory `$ git clone --depth 1 https://github.com/moritzhaller/wordpress-skeleton.git working-title`
 3. copy wp-config-sample.php to wp-config.php and modify it according to your local development environment and your project's working title `$ cd working-title && cp wp-config-sample.php wp-config.php`
 4. create local shared directory `$ mkdir shared`
-5. create local db-sync directory `$ mkdir db-symc`
 5. init and update git submodules
 	1. Initialize: `git submodule init`
 	2. Update: `git submodule update`

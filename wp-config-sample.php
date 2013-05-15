@@ -30,7 +30,7 @@ if ( file_exists( dirname( __FILE__ ) . '/memcached.php' ) )
 
 // Environment specific configuration
 // Changed manually after cloning or automatically by a deployment toolkit or similar
-define('WP_ENVIRONMENT', '%WP_ENVIRONMENT'); // Should be one of "development", "stage" or "production"
+define('WP_ENVIRONMENT', '%WP_ENVIRONMENT'); // Should be one of "development", "integration", "stage" or "production"
 define('DB_NAME', '%DB_NAME');
 define('DB_USER', '%DB_USER');
 define('DB_PASSWORD', '%DB_PASSWORD');
@@ -42,6 +42,12 @@ define('WP_HOME','%WP_HOMEURL'); // Where your homepage is at
 switch ($WP_ENVIRONMENT) {
 	case 'development':
 		// define( 'SAVEQUERIES', true ); // Save queries to file for debug reasons
+		define('WP_DEBUG', true);
+		ini_set('display_errors', E_ALL);
+		define('WP_DEBUG_DISPLAY', false);
+		break;
+	
+	case 'integration':
 		define('WP_DEBUG', true);
 		ini_set('display_errors', E_ALL);
 		define('WP_DEBUG_DISPLAY', false);
