@@ -1,3 +1,6 @@
+TODO:
+- define custom content directory according to environment. as of now there is a problem with wp-config.php being a symlink.
+
 # Wordpress Skeleton
 
 > "This is simply a skeleton repo for a WordPress site. Use it to jump-start your WordPress site repos, or fork it and customize it to your own liking!" - Mark Jaquith
