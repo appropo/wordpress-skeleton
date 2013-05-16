@@ -39,7 +39,7 @@ define('WP_SITEURL','%WP_SITEURL'); // Where the wordpress system files live in
 define('WP_HOME','%WP_HOMEURL'); // Where your homepage is at
 
 // Enable environment specific features like debugging or authentication
-switch ($WP_ENVIRONMENT) {
+switch (WP_ENVIRONMENT) {
 	case 'development':
 		// define( 'SAVEQUERIES', true ); // Save queries to file for debug reasons
 		define('WP_DEBUG', true);
