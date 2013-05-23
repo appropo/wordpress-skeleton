@@ -4,3 +4,6 @@
 [submodule "deploy"]
 	path = deploy
 	url = https://github.com/moritzhaller/wordpress-deployment-stack.git
+[submodule "cli"]
+	path = cli
+	url = https://github.com/moritzhaller/wordpress-cli.git
