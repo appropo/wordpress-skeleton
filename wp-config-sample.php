@@ -1,8 +1,8 @@
 <?php
 // Environment specific configuration
 // Changed manually after cloning or automatically by a deployment toolkit or similar
-define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' ); // Custom Content Directory
-define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
+define('WP_CONTENT_DIR', realpath($_SERVER['DOCUMENT_ROOT'] . '/content'));
+define('WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content');
 
 $table_prefix  = 'wt_'; // Table prefix, change to project-key (initals of 'working title' e.g. 'wt')
 
