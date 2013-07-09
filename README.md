@@ -1,6 +1,7 @@
 TODO:
 - <del>define custom content directory according to environment. as of now there is a problem with wp-config.php being a symlink.</del>
 - <del>Make .htaccess and robots.txt environment dependent by adding them to .gitignore and ship them with a sample-postfix.</del>
+- Fix clone `--depth 1` bug
 
 # Wordpress Skeleton
 
