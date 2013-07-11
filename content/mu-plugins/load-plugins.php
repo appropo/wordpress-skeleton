@@ -8,4 +8,5 @@
  * and (unlike for normal plugins) not for files in subdirectories
  * ------------------------------------------------------------------------ */
 
-//require WPMU_PLUGIN_DIR . '/path-to-subdir/plugin-name.php';
+// require WPMU_PLUGIN_DIR . '/path-to-subdir/plugin-name.php';
+

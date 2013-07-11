@@ -1,5 +1,7 @@
 TODO:
-- define custom content directory according to environment. as of now there is a problem with wp-config.php being a symlink.
+- <del>define custom content directory according to environment. as of now there is a problem with wp-config.php being a symlink.</del>
+- <del>Make .htaccess and robots.txt environment dependent by adding them to .gitignore and ship them with a sample-postfix.</del>
+- Fix clone `--depth 1` bug
 
 # Wordpress Skeleton
 
@@ -16,12 +18,13 @@ This is a fork from Mark Jaquith's wordpress skeleton at [https://github.com/mar
 ## Getting started
 1. setup your localhost (vhost, database, ...)
 2. clone this skeleton to your development project's directory `$ git clone --depth 1 https://github.com/moritzhaller/wordpress-skeleton.git working-title`
-3. copy wp-config-sample.php to wp-config.php and modify it according to your local development environment and your project's working title `$ cd working-title && cp wp-config-sample.php wp-config.php`
-4. create local shared directory `$ mkdir shared`
-5. init and update git submodules
+3. copy wp-config-sample.php to wp-config.php and modify it according to your local development environment and your project's working title `$ cd working-title && cp wp-config-sample.php wp-config.php`.
+4. Do the same with the .htacces-sample and the robots.txt
+5. create local shared directory `$ mkdir shared`
+6. init and update git submodules
 	1. Initialize: `git submodule init`
 	2. Update: `git submodule update`
-6. navigate to working-title.dev/wp/wp-admin/install.php and follow installation instructions
-7. Change the remote origin to your project's scm repository `$ git config -e`
-8. Add another remote repo for mergin upstream changes later `$ git remote add upstream https://github.com/moritzhaller/wordpress-skeleton.git`
-8. start developing your custom theme, api, or whatever your need to do
+7. navigate to working-title.dev/wp/wp-admin/install.php and follow installation instructions
+8. Change the remote origin to your project's scm repository `$ git config -e`
+9. Add another remote repo for mergin upstream changes later `$ git remote add upstream https://github.com/moritzhaller/wordpress-skeleton.git`
+10. start developing your custom theme, api, or whatever your need to do

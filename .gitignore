@@ -1,5 +1,7 @@
 /shared
 /wp-config.php
+/.htaccess
+/robots.txt
 /content/upgrade/
 /db/*-users.sql
 /db/*-ugd.sql
