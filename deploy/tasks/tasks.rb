@@ -1,16 +1,4 @@
-# Helper
-namespace :check do
-
-	desc "Check if environment is set"
-	task :env do
-		if environment == false
-			puts 'Please specify an environment. Aborting...'
-			exit
-		end
-	end
-
-end
-
+# Tasks
 namespace :setup do
 
 	desc "Set right permissions to the releases directory"
@@ -39,44 +27,5 @@ namespace :deploy do
 		run "ln -nfs #{shared_path}/config/robots-symlink.txt #{release_path}/robots.txt"
 		run "ln -nfs #{shared_path} #{release_path}/shared"
 	end
-
-	desc "Upload media files"
-	task :upload_media do
-		# ...
-	end	
-
-	desc "Migrate database"
-	task :migrate_db do
-		# ...
-	end	
-
-	desc "Upload wordpress configuration"
-	task :upload_config do
-		# ...
-	end	
-
-end
-
-namespace :integrate do
-
-	desc "Dump database snapshot on the remote environment server"
-	task :dump_snapshot do
-		# ...
-	end
-
-	desc "Scp the dumpfile to the local development machine"
-	task :download_dumpfile do
-		# ...
-	end	
-
-	desc "Truncate local database"
-	task :truncate_local_db do
-		# ...
-	end	
-
-	desc "Migrate local database"
-	task :migrate_local_db do
-		# ...
-	end	
 
 end
