@@ -5,5 +5,5 @@
 /content/upgrade/
 .DS_Store
 .sass-cache
-/build/node_modules
-/build/dist
+/theme-build/node_modules
+/theme-build/dist
