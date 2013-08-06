@@ -3,6 +3,7 @@
 /.htaccess
 /robots.txt
 /content/upgrade/
-/db/*-users.sql
-/db/*-ugd.sql
 .DS_Store
+.sass-cache
+/build/node_modules
+/build/dist
