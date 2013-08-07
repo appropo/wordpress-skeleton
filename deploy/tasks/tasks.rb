@@ -29,4 +29,10 @@ namespace :deploy do
 		run "ln -nfs #{shared_path} #{release_path}/shared"
 	end
 
+	desc "Change permissions"
+	task :change_permissions do
+		run "find #{current_path}/content/themes/#{application}/ -type f | xargs chmod 644"
+		run "find #{current_path}/content/themes/#{application}/ -type d | xargs chmod 755"
+	end
+
 end
