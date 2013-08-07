@@ -1,30 +1,28 @@
-TODO:
-- <del>define custom content directory according to environment. as of now there is a problem with wp-config.php being a symlink.</del>
-- <del>Make .htaccess and robots.txt environment dependent by adding them to .gitignore and ship them with a sample-postfix.</del>
-- Fix clone `--depth 1` bug
-
 # Wordpress Skeleton
 
-> "This is simply a skeleton repo for a WordPress site. Use it to jump-start your WordPress site repos, or fork it and customize it to your own liking!" - Mark Jaquith
-
-This is a fork from Mark Jaquith's wordpress skeleton at [https://github.com/markjaquith/WordPress-Skeleton], customized to my needs regarding deployment and a few environment specifics.
+_This Wordpress Skeleton is both, Wordpress and Workflow_. It is based on Mark Jaquith's [wordpress skeleton](https://github.com/markjaquith/WordPress-Skeleton), customized to my needs in terms of deployment and environment specific configuration.
 
 ## Assumptions
-* WordPress as a Git submodule in `/wp/`
-* Custom content directory in `/content/` (cleaner, and also because it can't be in `/wp/`)
-* `wp-config.php` in the root (because it can't be in `/wp/`)
-* All writable directories are symlinked to similarly named locations under `/shared/`.
+* Third party software and system files live in self-contained submodules.
+* User generated data and environment specific configuration won't be managed by a VCS.
+* Capistrano is used for deployment.
+* There is a build process for the frontend-theme (e.g. grunt).
 
-## Getting started
-1. setup your localhost (vhost, database, ...)
-2. clone this skeleton to your development project's directory `$ git clone --depth 1 https://github.com/moritzhaller/wordpress-skeleton.git working-title`
-3. copy wp-config-sample.php to wp-config.php and modify it according to your local development environment and your project's working title `$ cd working-title && cp wp-config-sample.php wp-config.php`.
-4. Do the same with the .htacces-sample and the robots.txt
-5. create local shared directory `$ mkdir shared`
-6. init and update git submodules
-	1. Initialize: `git submodule init`
-	2. Update: `git submodule update`
-7. navigate to working-title.dev/wp/wp-admin/install.php and follow installation instructions
-8. Change the remote origin to your project's scm repository `$ git config -e`
-9. Add another remote repo for mergin upstream changes later `$ git remote add upstream https://github.com/moritzhaller/wordpress-skeleton.git`
-10. start developing your custom theme, api, or whatever your need to do
+## Possible Workflow for setting up the development environment
+- Setup your localhost (e.g. vhost, database, etc.)
+- Clone this (shallow) repository: `$ git clone (--depth 1) --branch master https://github.com/moritzhaller/wordpress-skeleton.git working-title`
+- Checkout an developmet branch (or sth. else, depending on your branching-model): `$ git checkout -b development`
+- Change the remote origin to remote upstream by typing `$ git config -e` and modifying the appropriate lines (this is for merging upstream changes later on)
+- Add your development team's remote SCM server as origin: `$ git remote add origin ssh://git@scm.your-company.com/`
+- Initialize and update the submodule(s): `$ git submodule init && git submodule update`
+- Copy all environment specific files to become their git-ignored twins:
+    - `wp-config-sample.php` -> `wp-config.php`
+    - `.htaccess-sample` -> `.htaccess`
+    - `robots-sample.txt` -> `robots.txt`
+- Create a place for your shared resources: `$ mkdir -p shared/content/uploads`
+- Run through the wordpress installation process by hitting `http://working-title.dev/wp/wp-admin` in your browser
+- Bring in the theme bootstrap `cd ./content/themes && wget https://github.com/moritzhaller/wordpress-theme-bootstrap/archive/master.zip && unzip master.zip && mv wordpress-theme-bootstrap working-title && rm .gitkeep master.zip`
+- Push it: `git add . && git commit -m 'Initiate project' && git push origin development`
+- Activate the theme in the wordpress admin panel
+- (Create a local project-wiki, push it to a bare repository on your SCM-server and add it as a submodule to the project)
+- Start implementing features...
