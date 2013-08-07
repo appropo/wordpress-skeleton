@@ -11,9 +11,9 @@ namespace :setup do
 		run "mkdir -p #{shared_path}/config"
 		run "mkdir -p #{shared_path}/content/uploads"
 		run "chmod -R 775 #{shared_path}/content"
-		system "scp ../wp-config-sample.php #{user}@#{domain}:#{shared_path}/config/wp-config-symlink.php"
-		system "scp ../.htaccess-sample #{user}@#{domain}:#{shared_path}/config/htaccess-symlink"
-		system "scp ../robots-sample.txt #{user}@#{domain}:#{shared_path}/config/robots-symlink.txt"
+		system "scp wp-config-sample.php #{user}@#{domain}:#{shared_path}/config/wp-config-symlink.php"
+		system "scp .htaccess-sample #{user}@#{domain}:#{shared_path}/config/htaccess-symlink"
+		system "scp robots-sample.txt #{user}@#{domain}:#{shared_path}/config/robots-symlink.txt"
 	end
 
 end
