@@ -8,7 +8,7 @@ _This Wordpress Skeleton is both, Wordpress and Workflow_. It is based on Mark J
 * Capistrano is used for deployment.
 * There is a build process for the frontend-theme (e.g. grunt).
 
-## Possible Workflow for setting up the development environment
+## Possible Workflow
 - Setup your localhost (e.g. vhost, database, etc.)
 - Clone this (shallow) repository: `$ git clone (--depth 1) --branch master https://github.com/moritzhaller/wordpress-skeleton.git working-title`
 - Checkout an developmet branch (or sth. else, depending on your branching-model): `$ git checkout -b development`
