@@ -5,5 +5,7 @@
 /content/upgrade/
 .DS_Store
 .sass-cache
+/deploy/config/config.rb
+/deploy/config/environments.rb
 /theme-build/node_modules
 /theme-build/dist
