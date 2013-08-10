@@ -1,6 +1,6 @@
 # Wordpress Skeleton
 
-_This Wordpress Skeleton is both, Wordpress and Workflow_. It is based on Mark Jaquith's [wordpress skeleton](https://github.com/markjaquith/WordPress-Skeleton), customized to my needs in terms of deployment and environment specific configuration.
+_This Wordpress Skeleton is both, Wordpress and Workflow_. It is based on Mark Jaquith's [wordpress skeleton](https://github.com/markjaquith/WordPress-Skeleton), customized to facilitate a more structered development approach.
 
 ## Assumptions
 * Third party software and system files live in self-contained submodules.
