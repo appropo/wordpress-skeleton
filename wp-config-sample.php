@@ -15,6 +15,12 @@ define('DB_HOST', '%DB_HOST');
 define('WP_SITEURL','%WP_SITEURL'); // Where the wordpress system files live in
 define('WP_HOME','%WP_HOMEURL'); // Where your homepage is at
 
+// Disable the post revision feature
+define('WP_POST_REVISIONS', false);
+
+// Empty trash every 7 days
+define('EMPTY_TRASH_DAYS', 7);
+
 // Salts, for security
 // Grab these from: https://api.wordpress.org/secret-key/1.1/salt
 define( 'AUTH_KEY',         'put your unique phrase here' );
