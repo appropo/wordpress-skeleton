@@ -20,3 +20,4 @@ set :git_enable_submodules, 1
 set :use_sudo, false
 set :deploy_via, :remote_cache
 default_run_options[:pty] = true
+set :ssh_options, {:forward_agent => true}
